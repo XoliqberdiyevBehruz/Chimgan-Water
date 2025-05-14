@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     # third party
     'rest_framework',
     'drf_yasg',
+    'corsheaders',
     # local apps
     'common',
 ]
@@ -34,6 +35,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -121,3 +123,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 from core.settings.drf_yasg import *
 from core.settings.rest_framework import *
+from core.settings.jazzmin import *
+from core.settings.cors_headers import *
