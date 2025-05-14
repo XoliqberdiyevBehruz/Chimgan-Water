@@ -17,12 +17,18 @@ DEBUG = env.bool('DEBUG', default=True)
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # third party
+    'rest_framework',
+    'drf_yasg',
+    # local apps
+    'common',
 ]
 
 MIDDLEWARE = [
@@ -111,3 +117,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+from core.settings.drf_yasg import *
+from core.settings.rest_framework import *
