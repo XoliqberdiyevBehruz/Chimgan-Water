@@ -12,4 +12,12 @@ class NewsFilter(django_filters.FilterSet):
         fields = ['category', 'search']
     
     def filter_by_search(self, queryset, name, value):
-        return queryset.filter(Q(title__icontains=value) | Q(description__icontains=value))
+        return queryset.filter(
+            Q(title_uz__icontains=value) |
+            Q(title_ru__icontains=value) |
+            Q(title_en__icontains=value) |
+            Q(description_uz__icontains=value) |
+            Q(description_ru__icontains=value) | 
+            Q(description_en__icontains=value) 
+        )
+    

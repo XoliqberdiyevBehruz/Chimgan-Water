@@ -18,6 +18,7 @@ DEBUG = env.bool('DEBUG', default=True)
 
 INSTALLED_APPS = [
     'jazzmin',
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -125,3 +126,4 @@ from core.settings.drf_yasg import *
 from core.settings.rest_framework import *
 from core.settings.jazzmin import *
 from core.settings.cors_headers import *
+from core.settings.modeltranslation import *
